@@ -9,6 +9,45 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.eldritchcreator.presentation.home.HomeFragment"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_ancientOnesFragment"
+            app:destination="@id/ancientOnesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addAncientOneFragment"
+        android:name="com.example.eldritchcreator.presentation.ancientone.add.AddAncientOneFragment"
+        android:label="AddAncientOneFragment"
+        tools:layout="@layout/fragment_add_ancient_one" />
+
+    <fragment
+        android:id="@+id/ancientOnesFragment"
+        android:name="com.example.eldritchcreator.presentation.ancientone.list.AncientOnesFragment"
+        android:label="AncientOnesFragment"
+        tools:layout="@layout/fragment_ancient_ones">
+        <action
+            android:id="@+id/action_ancientOnesFragment_to_ancientOneDetailedFragment"
+            app:destination="@id/ancientOneDetailedFragment" />
+        <action
+            android:id="@+id/action_ancientOnesFragment_to_addAncientOneFragment"
+            app:destination="@id/addAncientOneFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ancientOneDetailedFragment"
+        android:name="com.example.eldritchcreator.presentation.ancientone.detail.AncientOneDetailedFragment"
+        android:label="AncientOneDetailedFragment"
+        tools:layout="@layout/fragment_ancient_one_detailed" />
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.eldritchcreator.presentation.game.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/fragment_game" />
 
 </navigation>

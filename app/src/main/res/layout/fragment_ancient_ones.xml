@@ -1,26 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.home.HomeFragment">
+    tools:context=".presentation.ancientone.list.AncientOnesFragment">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/homeBtnPlay"
+        android:id="@+id/aosBtnAdd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Play"
+        android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/homeBtnAncientOnes"
+        android:id="@+id/aosBtnDetail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Ancient Ones"
-        app:layout_constraintBottom_toTopOf="@+id/homeBtnPlay"
+        android:text="Detail"
+        app:layout_constraintBottom_toTopOf="@+id/aosBtnAdd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
