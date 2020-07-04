@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.eldritchcreator.presentation.home.HomeFragment"
+        android:name="com.eldritchcreator.presentation.home.HomeFragment"
         tools:layout="@layout/fragment_home">
 
         <action
@@ -21,13 +21,13 @@
 
     <fragment
         android:id="@+id/addAncientOneFragment"
-        android:name="com.example.eldritchcreator.presentation.ancientone.add.AddAncientOneFragment"
+        android:name="com.eldritchcreator.presentation.ancientone.add.AddAncientOneFragment"
         android:label="AddAncientOneFragment"
         tools:layout="@layout/fragment_add_ancient_one" />
 
     <fragment
         android:id="@+id/ancientOnesFragment"
-        android:name="com.example.eldritchcreator.presentation.ancientone.list.AncientOnesFragment"
+        android:name="com.eldritchcreator.presentation.ancientone.list.AncientOnesFragment"
         android:label="AncientOnesFragment"
         tools:layout="@layout/fragment_ancient_ones">
         <action
@@ -40,13 +40,13 @@
 
     <fragment
         android:id="@+id/ancientOneDetailedFragment"
-        android:name="com.example.eldritchcreator.presentation.ancientone.detail.AncientOneDetailedFragment"
+        android:name="com.eldritchcreator.presentation.ancientone.detail.AncientOneDetailedFragment"
         android:label="AncientOneDetailedFragment"
         tools:layout="@layout/fragment_ancient_one_detailed" />
 
     <fragment
         android:id="@+id/gameFragment"
-        android:name="com.example.eldritchcreator.presentation.game.GameFragment"
+        android:name="com.eldritchcreator.presentation.game.GameFragment"
         android:label="GameFragment"
         tools:layout="@layout/fragment_game" />
 

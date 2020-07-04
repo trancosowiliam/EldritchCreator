@@ -9,7 +9,7 @@ android {
     buildToolsVersion androidBuildToolsVersion
 
     defaultConfig {
-        applicationId "com.example.eldritchcreator"
+        applicationId "com.eldritchcreator"
         minSdkVersion androidMinSdkVersion
         targetSdkVersion androidTargetSdkVersion
         versionCode versionCode

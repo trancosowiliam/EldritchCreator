@@ -1,11 +1,11 @@
-package com.example.eldritchcreator.presentation.ancientone.detail
+package com.eldritchcreator.presentation.ancientone.detail
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.eldritchcreator.R
-import com.example.eldritchcreator.presentation.BaseFragment
+import com.eldritchcreator.R
+import com.eldritchcreator.presentation.BaseFragment
 
 class AncientOneDetailedFragment : BaseFragment() {
     override fun onCreateView(

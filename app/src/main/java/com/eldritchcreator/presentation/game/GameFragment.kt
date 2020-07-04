@@ -1,11 +1,11 @@
-package com.example.eldritchcreator.presentation.game
+package com.eldritchcreator.presentation.game
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.eldritchcreator.R
-import com.example.eldritchcreator.presentation.BaseFragment
+import com.eldritchcreator.R
+import com.eldritchcreator.presentation.BaseFragment
 
 class GameFragment : BaseFragment() {
     override fun onCreateView(

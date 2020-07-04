@@ -1,15 +1,24 @@
-package com.example.eldritchcreator.util
+package com.eldritchcreator.util
 
 import android.content.Context
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.TextPaint
 import android.text.TextUtils
-import android.text.style.*
+import android.text.style.BackgroundColorSpan
+import android.text.style.ClickableSpan
+import android.text.style.ForegroundColorSpan
+import android.text.style.ImageSpan
+import android.text.style.RelativeSizeSpan
+import android.text.style.StrikethroughSpan
+import android.text.style.StyleSpan
+import android.text.style.SubscriptSpan
+import android.text.style.SuperscriptSpan
+import android.text.style.URLSpan
+import android.text.style.UnderlineSpan
 import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import java.lang.IllegalStateException
 
 fun spannable(vararg te: SpannableString) : SpannableString {
     var spannable = SpannableString("")

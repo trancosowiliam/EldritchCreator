@@ -1,4 +1,4 @@
-package com.example.eldritchcreator.presentation
+package com.eldritchcreator.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
