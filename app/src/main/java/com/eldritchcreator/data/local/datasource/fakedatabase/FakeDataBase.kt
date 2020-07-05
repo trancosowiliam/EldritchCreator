@@ -1,9 +1,9 @@
 package com.eldritchcreator.data.local.datasource.fakedatabase
 
 object FakeDataBase {
-    val ghatanothoa = Ghatanothoa.ancientOne
+    private val shubNiggurath = ShubNiggurath.ancientOne
 
     val ancientOnes = listOf(
-        ghatanothoa
+        shubNiggurath
     )
 }

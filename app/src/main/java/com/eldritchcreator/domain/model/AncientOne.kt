@@ -20,21 +20,31 @@ data class AncientOne(
     )
 
     data class AsleepStatus(
-        val abilities: List<String>,
+        val abilities: List<Ability>,
         val flavorText: String,
         val reckoning: Boolean,
         val cultist: Cultist
     )
 
     data class AwakenedStatus(
-        val abilities: List<String>,
+        val abilitiesTitle: String,
+        val abilities: List<Ability>,
         val cultist: Cultist,
-        val wakeupEffectDescription: String?,
-        val finalMysteryTitle: String,
-        val finalMysteryFlavor: String,
-        val finalMysteryDescription: String,
+        val wakeupEffect: WakeupEffect?,
+        val finalMystery: FinalMystery,
         val reckoning: Boolean
-    )
+    ) {
+        data class WakeupEffect(
+            val title: String,
+            val description: String
+        )
+
+        data class FinalMystery(
+            val title: String,
+            val flavor: String,
+            val description: String
+        )
+    }
 
     data class MythosStage(
         val greenCount: Int,
@@ -46,7 +56,7 @@ data class AncientOne(
         val health: Int,
         val firstAttack: Attack?,
         val secondAttack: Attack?,
-        val description: String
+        val abilities: List<Ability>?
     ) {
         data class Attack(
             val skillTest: Skill,
