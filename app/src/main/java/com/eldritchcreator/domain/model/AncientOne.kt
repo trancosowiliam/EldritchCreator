@@ -29,8 +29,7 @@ data class AncientOne(
     data class AwakenedStatus(
         val abilities: List<String>,
         val cultist: Cultist,
-        val wakeupEffectTitle: String,
-        val wakeupEffectDescription: String,
+        val wakeupEffectDescription: String?,
         val finalMysteryTitle: String,
         val finalMysteryFlavor: String,
         val finalMysteryDescription: String,
@@ -52,7 +51,8 @@ data class AncientOne(
         data class Attack(
             val skillTest: Skill,
             val modify: Int,
-            val damage: Energy
+            val damage: Int,
+            val damageType: Energy
         )
     }
 }
