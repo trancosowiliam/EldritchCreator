@@ -19,7 +19,7 @@ class HomeFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         homeBtnPlay.setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToGameFragment())
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToChooseAncientOneFragment())
         }
 
         homeBtnAncientOnes.setOnClickListener {

@@ -12,11 +12,11 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_homeFragment_to_gameFragment"
-            app:destination="@id/gameFragment" />
-        <action
             android:id="@+id/action_homeFragment_to_ancientOnesFragment"
             app:destination="@id/ancientOnesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chooseAncientOneFragment"
+            app:destination="@id/chooseAncientOneFragment" />
     </fragment>
 
     <fragment
@@ -49,5 +49,17 @@
         android:name="com.eldritchcreator.presentation.game.GameFragment"
         android:label="GameFragment"
         tools:layout="@layout/fragment_game" />
+
+    <fragment
+        android:id="@+id/chooseAncientOneFragment"
+        android:name="com.eldritchcreator.presentation.game.choose.ChooseAncientOneFragment"
+        android:label="fragment_choose_ancient_one"
+        tools:layout="@layout/fragment_choose_ancient_one">
+
+        <action
+            android:id="@+id/action_chooseAncientOneFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+
 
 </navigation>

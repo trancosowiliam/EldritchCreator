@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iaoImgPhoto"
+        android:layout_width="90dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/shubniggurath" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/iaoTxtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:includeFontPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iaoImgPhoto"
+        app:layout_constraintTop_toTopOf="@id/iaoImgPhoto"
+        tools:text="Shub-Nigghurath" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/iaoTxtNickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:includeFontPadding="false"
+        android:textSize="@dimen/size_simple_subtitle"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iaoImgPhoto"
+        app:layout_constraintTop_toBottomOf="@id/iaoTxtName"
+        tools:text="A Cabra negra do bosque" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/iaoTxtDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:lines="2"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/iaoImgPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iaoImgPhoto"
+        tools:text="Em rituais pagãos, Shub-Niggurath absorve cultistas valorosos com seu corpo amorfo e os transforma em gof'nn hupadgh Shub-Niggurath, as proles da cabra. Sua prole primordial, os filhotes sombrios, emergem dos cantos mais distantes do globo para subjugar a humanidade" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
