@@ -35,4 +35,8 @@
 
 ## Release 3
 ### Expectation
-- Add import Ancient One mode
+- Add export printable card png
+
+## Release 4
+### Expectation
+- Cloud support
