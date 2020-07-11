@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.eldritchcreator.R
+import com.eldritchcreator.domain.model.AncientOne
 import com.eldritchcreator.presentation.BaseFragment
 import com.eldritchcreator.presentation.adapter.ancientone.AncientOneAdapter
 import com.eldritchcreator.util.observe
@@ -31,7 +32,9 @@ class AncientOnesFragment : BaseFragment() {
         super.observeEvents()
 
         viewModel.ancientOnesLiveData.observe(this) { ancientOnes ->
-            AncientOneAdapter.setup(aosRecAncientOnes, ancientOnes)
+            AncientOneAdapter.setup(aosRecAncientOnes, ancientOnes) {
+                navigateToDetail(it)
+            }
         }
     }
 
@@ -39,9 +42,13 @@ class AncientOnesFragment : BaseFragment() {
         aosBtnAdd.setOnClickListener {
             findNavController().navigate(AncientOnesFragmentDirections.actionAncientOnesFragmentToAddAncientOneFragment())
         }
+    }
 
-        aosBtnDetail.setOnClickListener {
-            findNavController().navigate(AncientOnesFragmentDirections.actionAncientOnesFragmentToAncientOneDetailedFragment())
-        }
+    private fun navigateToDetail(ancientOne: AncientOne) {
+        findNavController().navigate(
+            AncientOnesFragmentDirections.actionAncientOnesFragmentToAncientOneDetailedFragment(
+                ancientOne
+            )
+        )
     }
 }

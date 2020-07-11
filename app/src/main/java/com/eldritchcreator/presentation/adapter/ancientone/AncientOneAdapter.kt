@@ -9,18 +9,23 @@ import com.eldritchcreator.domain.model.AncientOne
 import kotlinx.android.synthetic.main.item_ancient_one.view.*
 
 class AncientOneAdapter(
-    val data: List<AncientOne>
+    val data: List<AncientOne>,
+    val onItemClickListener: (AncientOne) -> Unit
 ) : RecyclerView.Adapter<AncientOneAdapter.ViewHolder>() {
 
     companion object {
-        fun setup(recyclerView: RecyclerView, data: List<AncientOne>) {
+        fun setup(
+            recyclerView: RecyclerView,
+            data: List<AncientOne>,
+            onItemClickListener: (AncientOne) -> Unit
+        ) {
             recyclerView.addItemDecoration(
                 SimpleSpaceMarginItemDecoration(
                     recyclerView.resources.getDimension(R.dimen.margin_normal).toInt()
                 )
             )
 
-            recyclerView.adapter = AncientOneAdapter(data)
+            recyclerView.adapter = AncientOneAdapter(data, onItemClickListener)
         }
     }
 
@@ -35,6 +40,13 @@ class AncientOneAdapter(
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        init {
+            itemView.setOnClickListener {
+                onItemClickListener(data[adapterPosition])
+            }
+        }
+
         fun binder(ancientOne: AncientOne) {
             itemView.iaoImgPhoto.setImageResource(R.drawable.shubniggurath)
             itemView.iaoTxtName.text = ancientOne.name

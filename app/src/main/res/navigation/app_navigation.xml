@@ -42,13 +42,22 @@
         android:id="@+id/ancientOneDetailedFragment"
         android:name="com.eldritchcreator.presentation.ancientone.detail.AncientOneDetailedFragment"
         android:label="AncientOneDetailedFragment"
-        tools:layout="@layout/fragment_ancient_one_detailed" />
+        tools:layout="@layout/fragment_ancient_one_detailed">
+
+        <argument
+            android:name="ancientOne"
+            app:argType="com.eldritchcreator.domain.model.AncientOne" />
+    </fragment>
 
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.eldritchcreator.presentation.game.GameFragment"
         android:label="GameFragment"
-        tools:layout="@layout/fragment_game" />
+        tools:layout="@layout/fragment_game">
+        <argument
+            android:name="ancientOne"
+            app:argType="com.eldritchcreator.domain.model.AncientOne" />
+    </fragment>
 
     <fragment
         android:id="@+id/chooseAncientOneFragment"

@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.eldritchcreator.R
+import com.eldritchcreator.domain.model.AncientOne
 import com.eldritchcreator.presentation.BaseFragment
 import com.eldritchcreator.presentation.adapter.ancientone.AncientOneAdapter
 import com.eldritchcreator.util.observe
@@ -25,8 +27,18 @@ class ChooseAncientOneFragment : BaseFragment() {
         super.observeEvents()
 
         viewModel.ancientOnesLiveData.observe(this) { ancientOnes ->
-            AncientOneAdapter.setup(caoRecAncientOnes, ancientOnes)
+            AncientOneAdapter.setup(caoRecAncientOnes, ancientOnes) {
+                navigateToDetail(it)
+            }
         }
+    }
+
+    private fun navigateToDetail(ancientOne: AncientOne) {
+        findNavController().navigate(
+            ChooseAncientOneFragmentDirections.actionChooseAncientOneFragmentToGameFragment(
+                ancientOne
+            )
+        )
     }
 
 }

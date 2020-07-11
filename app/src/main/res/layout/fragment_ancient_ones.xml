@@ -10,20 +10,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@id/aosBtnDetail"
+        app:layout_constraintBottom_toTopOf="@id/aosBtnAdd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/item_ancient_one" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/aosBtnDetail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Detail"
-        app:layout_constraintBottom_toTopOf="@+id/aosBtnAdd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/aosBtnAdd"
