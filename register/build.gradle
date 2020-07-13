@@ -1,13 +1,13 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdkVersion androidCompileSdkVersion
     buildToolsVersion androidBuildToolsVersion
 
     defaultConfig {
-        applicationId "com.eldritchcreator"
         minSdkVersion androidMinSdkVersion
         targetSdkVersion androidTargetSdkVersion
         versionCode versionCode
@@ -31,17 +31,13 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
+
 }
 
 dependencies {
     implementation project(':core')
-    implementation project(':data')
     implementation project(':domain')
-    implementation project(':game')
-    implementation project(':home')
-    implementation project(':navigation')
-    implementation project(':register')
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    appDependencies.each { add(it.configuration, it.dependency, it.options) }
+    registerDependencies.each { add(it.configuration, it.dependency, it.options) }
 }

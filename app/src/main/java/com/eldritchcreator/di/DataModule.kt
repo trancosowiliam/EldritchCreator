@@ -1,8 +1,8 @@
 package com.eldritchcreator.di
 
-import com.eldritchcreator.data.local.datasource.AncientOneDataSource
-import com.eldritchcreator.data.local.datasource.AncientOneDatabaseDataSource
-import com.eldritchcreator.data.repository.AncientOneRepository
+import com.eldritchcreator.data.datasource.AncientOneDataSource
+import com.eldritchcreator.data.datasource.AncientOneDatabaseDataSource
+import com.eldritchcreator.domain.repository.AncientOneRepository
 import com.eldritchcreator.data.repository.AncientOneRepositoryImpl
 import org.koin.dsl.module
 
@@ -18,6 +18,4 @@ val dataModule = module {
             ancientOneDataSource = get()
         )
     }
-
-
 }
