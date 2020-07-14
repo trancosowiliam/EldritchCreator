@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation.xml"
+    app:startDestination="@id/homeFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.eldritchcreator.home.presentation.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_ancientOnesFragment"
+            app:destination="@id/ancientOnesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chooseAncientOneFragment"
+            app:destination="@id/chooseAncientOneFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addAncientOneFragment"
+        android:name="com.eldritchcreator.register.presentation.ancientone.add.AddAncientOneFragment"
+        android:label="AddAncientOneFragment"
+        tools:layout="@layout/fragment_add_ancient_one" />
+
+    <fragment
+        android:id="@+id/ancientOnesFragment"
+        android:name="com.eldritchcreator.register.presentation.ancientone.list.AncientOnesFragment"
+        android:label="AncientOnesFragment"
+        tools:layout="@layout/fragment_ancient_ones">
+        <action
+            android:id="@+id/action_ancientOnesFragment_to_ancientOneDetailedFragment"
+            app:destination="@id/ancientOneDetailedFragment" />
+        <action
+            android:id="@+id/action_ancientOnesFragment_to_addAncientOneFragment"
+            app:destination="@id/addAncientOneFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ancientOneDetailedFragment"
+        android:name="com.eldritchcreator.register.presentation.ancientone.detail.AncientOneDetailedFragment"
+        android:label="AncientOneDetailedFragment"
+        tools:layout="@layout/fragment_ancient_one_detailed">
+
+        <argument
+            android:name="ancientOne"
+            app:argType="com.eldritchcreator.domain.model.AncientOne" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.eldritchcreator.game.presentation.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/fragment_game">
+        <argument
+            android:name="ancientOne"
+            app:argType="com.eldritchcreator.domain.model.AncientOne" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chooseAncientOneFragment"
+        android:name="com.eldritchcreator.game.presentation.choose.ChooseAncientOneFragment"
+        android:label="fragment_choose_ancient_one"
+        tools:layout="@layout/fragment_choose_ancient_one">
+
+        <action
+            android:id="@+id/action_chooseAncientOneFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+
+
+</navigation>

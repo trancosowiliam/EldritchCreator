@@ -3,6 +3,7 @@ package com.eldritchcreator
 import android.app.Application
 import com.eldritchcreator.di.dataModule
 import com.eldritchcreator.di.domainModule
+import com.eldritchcreator.di.navigatorModule
 import com.eldritchcreator.di.presentationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -21,7 +22,8 @@ class EldritchApplication : Application() {
                 listOf(
                     dataModule,
                     presentationModule,
-                    domainModule
+                    domainModule,
+                    navigatorModule
                 )
             )
         }
