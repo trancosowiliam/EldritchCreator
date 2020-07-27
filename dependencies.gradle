@@ -119,6 +119,7 @@ ext {
     ]
 
     appDependencies = commonsDependencies +
+            navigationDependencies +
             androidDependencies +
             coroutineDependencies +
             koinDependencies +

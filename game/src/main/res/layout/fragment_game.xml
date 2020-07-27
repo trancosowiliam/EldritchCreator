@@ -4,17 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#eae2da"
     tools:context=".presentation.GameFragment">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/gameLblAncientOne"
-        android:layout_width="wrap_content"
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/gameImgAncientOne"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="game" />
+        app:srcCompat="@drawable/shubniggurath" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@id/gameImgAncientOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameImgAncientOne"
+        app:srcCompat="@drawable/anciantone_separator" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/gameImgDoom"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/doom_count" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_doom_count_text"
+        android:includeFontPadding="false"
+        android:text="16"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/gameImgDoom"
+        app:layout_constraintTop_toTopOf="@id/gameImgDoom" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/gameTxtAncientOneName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameImgAncientOne"
+        tools:text="Shub-Niggurath" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

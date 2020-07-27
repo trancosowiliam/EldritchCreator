@@ -22,7 +22,7 @@ class GameFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        gameLblAncientOne.text = "game\n${gameNavigator.ancientOne.name}"
+        gameTxtAncientOneName.text = gameNavigator.ancientOne.name
     }
 
 }
